@@ -5,41 +5,41 @@
   flex-direction: column;
   background-color: var(--bg-color);
   background-image: url(../images/cover-image-dark.png);
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
   width: 100%;
   min-width: 375px;
   height: 100vh;
-  margin-block-end: 40px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
   padding: 10px;
+  margin-block-end: 40px;
 }
 
 @media (min-width: 768px) {
   .header {
-      margin-block-end: 60px;
       padding: 20px;
+      margin-block-end: 60px;
   }
 }
 
 .header::after {
   content: "";
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
   position: absolute;
   top: 10px;
   left: 337px;
-  width: 25px;
-  height: 25px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
-  background-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -58,14 +58,14 @@
 
 .header::before {
   content: "";
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
   position: absolute;
   top: 633px;
   left: 10px;
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-  background-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -84,10 +84,6 @@
 
 .rec {
   position: absolute;
-  top: 10px;
-  left: 304px;
-  width: 33px;
-  height: 26px;
   color: var(--accent-color);
   font-family: var(--fontFamily);
   font-weight: 400;
@@ -95,6 +91,10 @@
   font-style: normal;
   line-height: 25px; /* 138.889% */
   text-align: center;
+  width: 33px;
+  height: 26px;
+  top: 10px;
+  left: 304px;
 }
 
 @media (min-width: 768px) {
@@ -114,28 +114,28 @@
 .rec::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 40px;
+  background-color: var(--accent-color);
   width: 9px;
   height: 9px;
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--accent-color);
-  background-color: var(--accent-color);
+  left: 40px;
+  top: 10px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 13px;
-  margin-inline-start: 285px;
   margin-block-start: 68px;
+  margin-inline-start: 285px;
   margin-block-end: 66.5px;
 }
 
 @media (min-width: 768px) {
   .header__theme-menu-list {
-      margin-inline-start: 658px;
       margin-block-start: 173px;
+      margin-inline-start: 658px;
       margin-block-end: 174.5px;
   }
 }
@@ -143,23 +143,23 @@
 @media (min-width: 1024px) {
   .header__theme-menu-list {
       flex-direction: row;
-      margin-inline-start: 373px;
       margin-block-start: 0px;
+      margin-inline-start: 373px;
       margin-block-end: 274.5px;
   }
 }
 
 .header__theme-menu-button {
-  border: none;
-  padding: 0 13px 5px;
+  background-color: transparent;
   color: var(--accent-color);
+  text-align: center;
   font-family: var(--fontFamily);
-  font-weight: 400;
   font-size: var(--fontSizeHeading);
   font-style: normal;
+  font-weight: 400;
   line-height: 18px; /* 100% */
-  text-align: center;
-  background-color: transparent;
+  border: none;
+  padding: 0 13px 5px;
 }
 
 .header__theme-menu-button:focus {
@@ -171,35 +171,35 @@
 }
 
 .header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
   display: inline-flex;
+  padding: 0px 13px 5px;
   justify-content: center;
   align-items: center;
-  padding: 0px 13px 5px;
-  outline: 1px solid rgba(255, 0, 112, 0.4);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid #ff0070;
   pointer-events: none;
+  border: 1px solid #ff0070;
 }
 
 .header-title {
-  margin-block-end: 55px;
   color: var(--colorHeadingText);
+  text-shadow: 4px 4px 0px var(--accent-color);
   font-family: var(--fontFamily);
-  font-weight: var(--font-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
+  font-weight: var(--font-weight);
   line-height: 95.7px;
-  text-shadow: 4px 4px 0px var(--accent-color);
+  margin-block-end: 55px;
 }
 
 @media (min-width: 768px) {
   .header-title {
+      line-height: 99px;
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
       position: relative;
       right: 20px;
-      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-      line-height: 99px;
       white-space: nowrap;
   }
 }
@@ -217,17 +217,17 @@
 
 @media (min-width: 768px) {
   .header-content {
-      margin-inline-start: 364px;
       margin-block-start: 107px;
+      margin-inline-start: 364px;
   }
 }
 
 @media (min-width: 1024px) {
   .header-content {
+      margin-block-start: 58px;
+      margin-inline-start: 490px;
       width: auto;
       height: 71px;
-      margin-inline-start: 490px;
-      margin-block-start: 58px;
   }
 }
 
@@ -238,10 +238,9 @@
 .header-text {
   color: var(--bg-color);
   font-family: var(--fontFamily);
-  font-weight: var(--font-weight);
-  font-weight: var(--font-weight);
   font-size: var(--fontSizeHeading);
   font-style: normal;
+  font-weight: var(--font-weight);
   line-height: 23.4px; /* 130% */
 }
 
@@ -268,8 +267,8 @@
 @media (min-width: 768px) {
   .first-section {
       display: grid;
-      grid-template-columns: 1fr 472px;
       gap: 20px;
+      grid-template-columns: 1fr 472px;
   }
 }
 
@@ -280,13 +279,13 @@
 }
 
 .heading {
-  margin-block-end: 20px;
   color: var(--accent-color);
   font-family: var(--fontFamily);
-  font-weight: var(--font-weight);
   font-size: var(--fontSizeHeading);
   font-style: normal;
+  font-weight: var(--font-weight);
   line-height: 23.4px; /* 130% */
+  margin-block-end: 20px;
 }
 
 @media (min-width: 768px) {
@@ -304,14 +303,14 @@
 }
 
 .next-heading {
-  margin-block-start: 20px;
-  margin-block-end: 10px;
   color: var(--bg-color);
   font-family: var(--fontFamily);
-  font-weight: var(--font-weight);
   font-size: var(--fontSizeHeading);
   font-style: normal;
+  font-weight: var(--font-weight);
   line-height: 23.4px; /* 130% */
+  margin-block-start: 20px;
+  margin-block-end: 10px;
 }
 
 @media (min-width: 768px) {
@@ -323,15 +322,15 @@
 .text {
   color: #f1b2ce;
   font-family: var(--fontFamily);
-  font-weight: 400;
   font-size: var(--fontSizeHeading);
   font-style: normal;
+  font-weight: 400;
   line-height: 23.4px; /* 130% */
 }
 
 .link {
-  text-decoration: none;
   text-shadow: 1px 1px 0px var(--accent-color);
+  text-decoration: none;
 }
 
 .link:hover {
@@ -361,9 +360,9 @@
 @media (min-width: 1024px) {
   .second-section {
       display: grid;
+      gap: 20px;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 23px 1fr;
-      gap: 20px;
   }
 }
 
@@ -377,8 +376,8 @@
 @media (min-width: 768px) {
   .third-section {
       display: grid;
-      grid-template-columns: 1fr 472px;
       gap: 20px;
+      grid-template-columns: 1fr 472px;
   }
 }
 
@@ -409,25 +408,25 @@
 }
 
 .section__gallery {
-  margin-block-end: 40px;
   padding: 0 10px 0;
+  margin-block-end: 40px;
 }
 
 @media (min-width: 768px) {
   .section__gallery {
-      margin-block-end: 60px;
       padding: 0 20px 0;
+      margin-block-end: 60px;
   }
 }
 
 .picture__heading {
-  margin-block-end: 10px;
   color: var(--bg-color);
   font-family: var(--fontFamily);
-  font-weight: var(--font-weight);
   font-size: var(--fontSizeHeading);
   font-style: normal;
+  font-weight: var(--font-weight);
   line-height: 23.4px; /* 130% */
+  margin-block-end: 10px;
 }
 
 @media (min-width: 768px) {
@@ -443,13 +442,13 @@
 
 @media (min-width: 768px) {
   .gallery {
+      gap: 20px;
       grid-template-columns: repeat(3, auto);
       grid-template-rows: repeat(3, auto);
       grid-template-areas:
           "sunset sunset ice-cream"
           "tape books ice-cream"
           "tape street street";
-      gap: 20px;
   }
 }
 
@@ -484,40 +483,40 @@
 }
 
 .img-gallery {
-  object-fit: cover;
-  object-position: center;
   inline-size: 100%;
   block-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .footer {
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
+  padding: 10px;
   width: 100%;
   min-width: 375px;
   height: 100vh;
-  padding: 10px;
 }
 
 @media (min-width: 768px) {
   .footer {
+      padding: 20px;
       display: flex;
       justify-content: center;
-      padding: 20px;
   }
 }
 
 .footer::after {
   content: "";
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
   position: absolute;
   top: 10px;
   left: 337px;
-  width: 25px;
-  height: 25px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
-  background-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -536,14 +535,14 @@
 
 .footer::before {
   content: "";
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
   position: absolute;
   top: 633px;
   left: 10px;
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-  background-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -561,14 +560,14 @@
 }
 
 .footer-title {
-  margin-block-end: 5px;
   color: var(--colorHeadingText);
+  text-shadow: 2px 2px 0px var(--accent-color);
   font-family: var(--fontFamily);
-  font-weight: var(--font-weight);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
+  font-weight: var(--font-weight);
   line-height: 95.7px;
-  text-shadow: 2px 2px 0px var(--accent-color);
+  margin-block-end: 5px;
 }
 
 @media (min-width: 768px) {
