@@ -14,7 +14,7 @@
   --text-shadow: #ff0070;
   --bg-image: url(../images/cover-image-light.png);
   --text-color: #353430;
-  --hover-button: #32312d66;
+  --hover-button: rgba(50, 49, 45, 0.4);
   --pink-color: #ff0070;
   --color-button: #353430;
   --accent-color: #ff8dcb;
@@ -29,6 +29,10 @@
   --content-gap: 10px;
   --paragraph-gap: 50px;
   --font-weight: 700;
+}
+
+.theme_light .rec {
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -52,10 +56,6 @@
       --content-gap: 10px;
       --paragraph-gap: 50px;
       --font-weight: 700;
-  }
-
-  .rec {
-      display: none;
   }
 }
 
@@ -81,8 +81,8 @@
       --paragraph-gap: 50px;
       --font-weight: 700;
   }
+}
 
-  .rec {
-      display: none;
-  }
+.theme_auto .rec {
+  display: none;
 }

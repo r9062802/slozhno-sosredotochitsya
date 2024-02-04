@@ -4,6 +4,7 @@
 */
 
 :root {
+  --hover-button: rgba(255, 0, 112, 0.4);
   --border-color: #ff0070;
   --text-shadow: #ff0070;
   --bg-image: url(../images/cover-image-dark.png);
@@ -22,19 +23,3 @@
   --paragraph-gap: 50px;
   --font-weight: 700;
 }
-/*
-:root {
---accent-color: #353430;
---outline-color: #353430;
---heading-text: #ffc2e6; 
---bg-color: #fff1f7;;
---font-family:  "IBM Plex Mono", monospace; 
---size-heading: 18px;
---font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
---size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
---gap: 20px;
---content-gap: 10px;
---paragraph-gap: 50px;
---font-weight: 700;
-
-*/
