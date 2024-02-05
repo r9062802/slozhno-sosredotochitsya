@@ -5,6 +5,7 @@
 */
 
 .page.theme_dark {
+  --hover-button: rgba(255, 0, 112, 0.4);
   --border-color: #ff0070;
   --text-shadow: #ff0070;
   --bg-image: url(../images/cover-image-dark.png);
