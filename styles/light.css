@@ -81,8 +81,9 @@
       --paragraph-gap: 50px;
       --font-weight: 700;
   }
-}
 
-.theme_auto .rec {
-  display: none;
+  .theme_auto .rec {
+    display: none;
+  }
+
 }
